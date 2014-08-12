@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/console"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:id="@+id/card_container"
+        android:layout_below="@id/console"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"/>
+    <Button
+        android:id="@+id/button_refresh"
+        android:layout_below="@id/card_container"
+        android:layout_width="match_parent"
+        android:text="@string/button_refresh"
+        android:layout_height="wrap_content"
+        android:onClick="onRefreshCardViewClick"/>
+    <Button
+        android:id="@+id/button_find_matches"
+        android:layout_below="@id/button_refresh"
+        android:layout_width="match_parent"
+        android:text="@string/button_find_matches"
+        android:layout_height="wrap_content"
+        android:onClick="onFindMatchesClick"/>
+    <Button
+        android:id="@+id/button_end_game"
+        android:layout_below="@id/button_find_matches"
+        android:layout_width="match_parent"
+        android:text="@string/button_end_game"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/matches_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:id="@+id/matches_container"
+        android:layout_below="@id/button_end_game"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"/>
+
+</RelativeLayout>
